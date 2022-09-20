@@ -1,0 +1,11 @@
+<p>loginform works!</p>
+<div class="container">
+  <form #loginform="ngForm" (ngSubmit)="getform(loginform.value)">
+    <input type="text" ngModel name="name" placeholder="name" /><br /><br />
+    <input type="email" ngModel name="email" placeholder="email" /><br /><br />
+    <button class="btn btn-success">submit</button>
+  </form>
+
+  <h6 class="pt-5">Your values are :</h6>
+  <p class="text-danger">{{ data.name }}{{ data.email }}</p>
+</div>

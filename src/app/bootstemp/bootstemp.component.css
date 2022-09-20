@@ -1,0 +1,12 @@
+.card {
+  overflow: hidden;
+}
+.card > img {
+  transition: all 0.8s ease;
+}
+
+.card > img:hover {
+  filter: brightness(1.4);
+  transition: all 0.8s ease;
+  scale: 110%;
+}

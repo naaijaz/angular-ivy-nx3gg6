@@ -1,0 +1,12 @@
+<p>loops works!</p>
+
+<ul *ngFor="let item of users">
+  <li>{{ item.name }}</li>
+  <li>{{ item.email }}</li>
+  <li>{{ item.Mobile }}</li>
+  <li>
+    <ul *ngFor="let media of item.socialmedia">
+      <li>{{ media }}</li>
+    </ul>
+  </li>
+</ul>

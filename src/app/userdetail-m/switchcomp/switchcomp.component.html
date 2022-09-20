@@ -1,0 +1,23 @@
+<p>switchcomp works!</p>
+<input type="text" value="color name" #clrval (keyup)="getClr(clrval.value)" />
+<div [ngSwitch]="color">
+  <h1 *ngSwitchCase="'red'" [ngStyle]="{color}">color is red</h1>
+  <h1 *ngSwitchCase="'blue'" [ngStyle]="{color}">color is blue</h1>
+  <h1 *ngSwitchCase="'green'" [ngStyle]="{color}">color is green</h1>
+  <h1 *ngSwitchCase="'purple'" [ngStyle]="{color}">color is Purple</h1>
+  <!-- <h1 *ngSwitchDefault="'cyan'" [ngStyle]="{color}">color is cyan</h1> -->
+</div>
+
+<select
+  name="formcontrol"
+  id=""
+  #selected
+  (change)="getProductVal(selected.value)"
+>
+  <option value="{red}">red</option>
+  <option value="green">green</option>
+  <option value="purple">purple</option>
+  <option value="grey">default</option>
+</select>
+<h2 [ngStyle]="{color}">{{ colorselected }}</h2>
+<!-- <h2 style="color:{{ colorselected }}">{{ colorselected }}</h2> -->
